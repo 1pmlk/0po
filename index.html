@@ -1,0 +1,173 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFIT Official</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;700&display=swap');
+        
+        body {
+            background-color: #0A0A0A;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+        .header {
+            background: linear-gradient(45deg, #ff4500, #ffcc00, #ff4500);
+            padding: 15px;
+            font-size: 26px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            border-radius: 50px;
+            width: 90%;
+            margin: 15px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .winner-marquee {
+            width: 100%;
+            overflow: hidden;
+            background: #222;
+            color: #ffcc00;
+            padding: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            white-space: nowrap;
+            position: relative;
+        }
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 50s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .match-card {
+            background: #1A1A1A;
+            color: white;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 15px auto;
+            width: 92%;
+            max-width: 420px;
+            position: relative;
+            box-shadow: 0px 0px 12px rgba(255, 69, 0, 0.5);
+            border: 2px solid #FF4500;
+        }
+        .timer, .price {
+            padding: 6px 12px;
+            position: absolute;
+            top: -10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .timer { background: #FF4500; left: 12px; }
+        .price { background: #FFCC00; color: black; right: 12px; }
+        .join-btn {
+            background: #FF4500;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+        .join-btn:hover { background: #FF6347; }
+        .uid-input {
+            margin-top: 15px;
+        }
+        .uid-input input {
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            text-align: center;
+        }
+        .status-message {
+            margin-top: 5px;
+            color: #ffcc00;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 25px;
+            font-size: 18px;
+            color: gold;
+            font-weight: bold;
+            padding-bottom: 15px;
+        }
+    </style>
+    <script>
+        function validateUID(input) {
+            let uid = input.value;
+            let message = input.nextElementSibling;
+            if (uid.length >= 7 && uid.length <= 15 && !isNaN(uid)) {
+                message.textContent = "UID accepted, waiting for server to accept";
+            } else {
+                message.textContent = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">FFIT OFFICIAL</div>
+    
+    <div class="winner-marquee">
+        <div class="marquee-content">
+            RAJ WON RS 10 | ANKIT WON RS 15 | VIKAS WON RS 20 | SUMIT WON RS 25 | ROHIT WON RS 30 |
+            ADITYA WON RS 12 | RAVI WON RS 22 | MOHIT WON RS 35 | ARJUN WON RS 50 | SANDEEP WON RS 45 |
+            AMAN WON RS 55 | PANKAJ WON RS 40 | HARSH WON RS 60 | NITIN WON RS 75 | KUNAL WON RS 80 |
+            SHUBHAM WON RS 20 | KARTIK WON RS 35 | DINESH WON RS 90 | YASH WON RS 100 | NAVEEN WON RS 110 |
+        </div>
+    </div>
+    
+    <div class="match-card">
+        <div class="timer">1 Day</div>
+        <div class="price">Entry Fee: 10RS</div>
+        <h2>HOWLERS vs WARBINGERS</h2>
+        <p>Players Joined: 7/20</p>
+        <p>Booyah Amount: 30RS</p>
+        <p>6 KILL : 20RS</p>
+        <p>4 KILL : 10RS</p>
+        <div class="uid-input"><input type="text" placeholder="Enter Game UID" oninput="validateUID(this)"><div class="status-message"></div></div>
+        <a href="https://t.me/ffitofficial" class="join-btn">JOIN NOW</a>
+    </div>
+
+    <div class="match-card">
+        <div class="timer">3 Days</div>
+        <div class="price">Entry Fee: 15RS</div>
+        <h2>VULTURES vs SHADOWS</h2>
+        <p>Players Joined: 9/15</p>
+       <p>Booyah Amount: 40RS</p>
+        <p>6 KILL : 30RS</p>
+        <p>4 KILL : 20RS</p>
+        <div class="uid-input"><input type="text" placeholder="Enter Game UID" oninput="validateUID(this)"><div class="status-message"></div></div>
+        <a href="https://t.me/ffitofficial" class="join-btn">JOIN NOW</a>
+    </div>
+
+    <div class="match-card">
+        <div class="timer">3 Days</div>
+        <div class="price">Entry Fee: 20RS</div>
+        <h2>NIGHTMARES vs HUNTERS</h2>
+        <p>Players Joined: 3/10</p>
+        <p>Booyah Amount: 50RS</p>
+        <p>6 KILL : 40RS</p>
+        <p>4 KILL : 20RS</p>
+        <div class="uid-input"><input type="text" placeholder="Enter Game UID" oninput="validateUID(this)"><div class="status-message"></div></div>
+        <a href="https://t.me/ffitofficial" class="join-btn">JOIN NOW</a>
+    </div>
+    
+    <div class="footer">© 2025 FFIT OFFICIAL</div>
+</body>
+</html>
